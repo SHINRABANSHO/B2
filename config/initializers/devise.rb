@@ -5,6 +5,7 @@ Devise.setup do |config|
 
   config.omniauth :facebook, '490621954635880', 'a8e5b30855c86345c4a972acc43e7c5c'
 
+  config.secret_key = '1f9c55f251ecbd710a549950c68956762444062a037c7f1d97c7fccdd50a063bb6ebb45c90742e47d3eece3b782917cff36deece246ba30147d4da61042bd7b5'
 
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
