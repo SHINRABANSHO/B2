@@ -9,8 +9,33 @@
   </head>
 
   <body>
+    <p id="notice"><%= notice %></p>
+    <header>
 
-<script>
+
+      <div class="container">
+        <nav id="nav">
+          <ul>
+            <li><a href=".html"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+            <li><a href=".html"><i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
+            <li><a href=".html"><i class="fa fa-paper-plane" aria-hidden="true"></i></a></li>
+            <li><a href=".html"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+              <% if user_signed_in? %>
+                  <strong><%= link_to current_user.username, pages_show_path %></strong>
+                  <li><%= link_to 'プロフィール変更', edit_user_registration_path %></li>
+                  <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+              <% else %>
+                  <li><%= link_to 'サインアップ', new_user_registration_path %></li>
+                  <li><%= link_to 'ログイン', new_user_session_path %></li>
+              <% end %>
+          <ul>
+        </nav>
+        <div class="headA"> <a href="X_project.html" class="container-small"><img src="/渡辺直美.jpg" alt""></a> <button type="button" class="headC">
+    <span class="fa fa-bars" title="MENU"></span>
+    </button> </div>
+      </div>
+    </header>
+<!--<script>
   window.fbAsyncInit = function() {
     FB.init({
       appId      : 'B2',
@@ -41,7 +66,7 @@
 
 
 <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true"></div>
-user_omniauth_authorize_path(:facebook)
+user_omniauth_authorize_path(:facebook)-->
     <%= yield %>
   </body>
 </html>

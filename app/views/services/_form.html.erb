@@ -1,0 +1,72 @@
+<%= form_with(model: service, local: true) do |form| %>
+  <% if service.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(service.errors.count, "error") %> prohibited this service from being saved:</h2>
+
+      <ul>
+      <% service.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :service_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company_id %>
+    <%= form.text_field :company_id, id: :service_company_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status, id: :service_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :top_img %>
+    <%= form.text_field :top_img, id: :service_top_img %>
+  </div>
+
+  <div class="field">
+    <%= form.label :img %>
+    <%= form.text_field :img, id: :service_img %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :service_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :strong_point %>
+    <%= form.text_field :strong_point, id: :service_strong_point %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nps %>
+    <%= form.text_field :nps, id: :service_nps %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price, id: :service_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :starting_cost %>
+    <%= form.text_field :starting_cost, id: :service_starting_cost %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number_of_review %>
+    <%= form.text_field :number_of_review, id: :service_number_of_review %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

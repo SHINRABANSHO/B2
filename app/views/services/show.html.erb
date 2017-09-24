@@ -1,0 +1,63 @@
+<section class="conA service_img">
+    <p></p>
+</section>
+<nav>
+  <ul>
+    <li><a href=".html"><i class="fa fa-plus" aria-hidden="true"></i>紹介サービス</a></li>
+    <li><a href=".html"><i class="fa fa-comments" aria-hidden="true"></i>応援の声</a></li>
+    <li><a href=".html"><i class="fa fa-handshake-o" aria-hidden="true"></i>友達申請</a></li>
+    <li><a href=".html"><i class="fa fa-thumbs-up" aria-hidden="true"></i>応援する</a></li>
+  </ul>
+</nav>
+<section class="conB">
+  <div class="container">
+    <div class="company_message">
+      <h1><span><%= @service.name %></span></h1>
+    </div>
+  </div>
+  <div class="container">
+    <div class="text">
+      <h2><span>サービス紹介</span></h2>
+      <div class="textbox">
+        <p><%= @service.description %></p>
+      </div>
+    </div>
+    <div class="conA img_band">
+        <p></p>
+    </div>
+    <div class="text">
+      <h2><span>このサービスの強み</span></h2>
+      <div class="textbox">
+        <p><%= @service.strong_point %></p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section>
+  <div class="conA img_band">
+    <p></p>
+  </div>
+</section>
+
+<section class="conC">
+  <div class="container">
+    <div class="text">
+      <h2><span>このサービスの評判</span></h2>
+      <p></p>
+    </div>
+  </div>
+</section>
+<% @reviews.each do |review| %>
+ <section class="conD">
+   <div class="container review">
+     <div class="photo"><img src="" alt="img" width="150px" height="150px"></div>
+     <div class="text">
+       <h3><%= review.name %>/h3>
+       <img src="">
+       <p><%= review.content %></p>
+     </div>
+   </div>
+ </section>
+<hr style="border:0;border-top:3px solid #e6e6fa;">
+<% end %>

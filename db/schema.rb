@@ -10,10 +10,54 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170916123550) do
+ActiveRecord::Schema.define(version: 20170924145421) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "companies", force: :cascade do |t|
+    t.string "name"
+    t.string "number"
+    t.string "owners_id"
+    t.string "status"
+    t.string "icon"
+    t.string "top_img"
+    t.string "img"
+    t.string "message"
+    t.string "thought"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string "name"
+    t.string "valuation"
+    t.string "promotion_score"
+    t.string "price"
+    t.string "starting_cost"
+    t.string "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "service_id"
+  end
+
+  create_table "services", force: :cascade do |t|
+    t.string "name"
+    t.string "company_id"
+    t.string "status"
+    t.string "top_img"
+    t.string "img"
+    t.string "message"
+    t.string "description"
+    t.string "strong_point"
+    t.string "nps"
+    t.string "price"
+    t.string "starting_cost"
+    t.string "number_of_review"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name"

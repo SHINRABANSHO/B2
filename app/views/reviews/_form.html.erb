@@ -1,0 +1,57 @@
+<%= form_with(model: review, local: true) do |form| %>
+  <% if review.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(review.errors.count, "error") %> prohibited this review from being saved:</h2>
+
+      <ul>
+      <% review.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :review_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :service_id %>
+    <%= form.text_field :service_id, id: :review_service_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :review_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valuation %>
+    <%= form.text_field :valuation, id: :review_valuation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :promotion_score %>
+    <%= form.text_field :promotion_score, id: :review_promotion_score %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price, id: :review_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :starting_cost %>
+    <%= form.text_field :starting_cost, id: :review_starting_cost %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_field :content, id: :review_content %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

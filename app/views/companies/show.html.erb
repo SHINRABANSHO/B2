@@ -1,7 +1,5 @@
 <section class="conA thick_band">
-  <div class="container"> <img src="/original-crop-u3278.jpg" align="center">
-    <h1><%= @user.last_name %> <%= @user.first_name %></h1>
-  </div>
+    <p></p>
 </section>
 <nav>
   <ul>
@@ -13,44 +11,36 @@
 </nav>
 <section class="conB">
   <div class="container">
-    <div class="text">
-      <h2><span>所属</span></h2>
-      <p>user.company.name代入</p>
-      <h3><span>役職</span></h3>
-      <p><%= @user.position %></p>
+    <div class="company_message">
+      <h1><span><%= @company.message %></span></h1>
     </div>
+  </div>
+  <div class="container">
     <div class="text">
-      <h2><span>自己紹介</span></h2>
+      <h2><span>私たちの想い</span></h2>
       <div class="textbox">
-        <p><%= @user.whoiam %></p>
+        <p><%= @company.thought %></p>
       </div>
-
     </div>
   </div>
 </section>
+<section>
+  <div class="conA img_band">
+    <p></p>
+  </div>
+</section>
+
 <section class="conC">
   <div class="container">
     <div class="text">
-      <h2><span><%= @user.last_name %> <%= @user.first_name %>さんイチオシのサービス</span></h2>
+      <h2><span><%= @company.name %>のサービス</span></h2>
       <p></p>
     </div>
   </div>
 </section>
 <section class="conD">
   <div class="container">
-    <div class="photo"><img src="/icon_slack100x100bb.jpg" alt="img" width="150px" height="150px"></div>
-    <div class="text">
-      <h2>Slack</h2>
-      <h3>社内チャット</h3>
-      <p>圧倒的力で成約してくれました</p> <img src="/スクリーンショット 2017-08-22 152821.png">
-      <p>今まで営業として働いていて、勤怠管理は紙でやっていました。 しかし利用し始めてから、直行直帰した外出先でも勤怠管理が出来るようになったので、残業代もしっかりと出るようになりました。</p>
-    </div>
-  </div>
-</section>
-<hr style="border:0;border-top:3px solid #e6e6fa;">
-<section class="conD">
-  <div class="container">
-    <div class="photo"><img src="/icon_googledrive.jpg" alt="img" width="150px" height="150px"></div>
+    <div class="photo"><img src="icon_slack100x100bb.jpg" alt="img" width="150px" height="150px"></div>
     <div class="text">
       <h2>Slack</h2>
       <h3>社内チャット</h3>
@@ -62,48 +52,67 @@
 <hr style="border:0;border-top:3px solid #e6e6fa;">
 <section class="conD">
   <div class="container">
-    <div class="photo"><img src="/icon_skype100x100bb.jpg" alt="img" width="150px" height="150px"></div>
+    <div class="photo"><img src="icon_googledrive.jpg" alt="img" width="150px" height="150px"></div>
     <div class="text">
       <h2>Slack</h2>
       <h3>社内チャット</h3>
-      <p>圧倒的力で成約してくれました</p> <img src="/スクリーンショット 2017-08-22 152821.png">
+      <p>圧倒的力で成約してくれました</p> <img src="スクリーンショット 2017-08-22 152821.png">
       <p>今まで営業として働いていて、勤怠管理は紙でやっていました。 しかし利用し始めてから、直行直帰した外出先でも勤怠管理が出来るようになったので、残業代もしっかりと出るようになりました。</p>
     </div>
   </div>
 </section>
-<footer>
+<hr style="border:0;border-top:3px solid #e6e6fa;">
+<section class="conD">
   <div class="container">
-    <div class="footA">
-      <h2></h2>
-      <p> <a href=" "> </a> </p>
-      <nav class="footD">
-        <ul>
-          <li><a href="#"><span class="fa fa-twitter" title="Twitter"></span></a></li>
-          <li><a href="#"><span class="fa fa-facebook" title="Facebook"></span></a></li>
-          <li><a href="#"><span class="fa fa-instagram" title="Instagram"></span></a></li>
-          <li><a href="#"><span class="fa fa-youtube" title="YouTube"></span></a></li>
-        </ul>
-      </nav>
+    <div class="photo"><img src="icon_skype100x100bb.jpg" alt="img" width="150px" height="150px"></div>
+    <div class="text">
+      <h2>Slack</h2>
+      <h3>社内チャット</h3>
+      <p>圧倒的力で成約してくれました</p> <img src="スクリーンショット 2017-08-22 152821.png">
+      <p>今まで営業として働いていて、勤怠管理は紙でやっていました。 しかし利用し始めてから、直行直帰した外出先でも勤怠管理が出来るようになったので、残業代もしっかりと出るようになりました。</p>
     </div>
-    <nav class="footB">
-      <div>
-        <h3>Contents</h3>
-        <ul>
-          <li><a href="#">Top</a></li>
-          <li><a href="#">Imformation</a></li>
-          <li><a href="#">Access</a></li>
-        </ul>
-      </div>
-    </nav>
-    <div class="footC"> All rights reserved. </div>
   </div>
-</footer>
-<script src="https://use.fontawesome.com/da82d66dc5.js"></script>
-<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-<script>
-  $(function(){
-  $(".headC").click(function(){
-  $(".headB").slideToggle();
-  });
-  });
-</script>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <%= @company.number %>
+</p>
+
+<p>
+  <strong>Owners:</strong>
+  <%= @company.owners_id %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @company.status %>
+</p>
+
+<p>
+  <strong>Icon:</strong>
+  <%= @company.icon %>
+</p>
+
+<p>
+  <strong>Top img:</strong>
+  <%= @company.top_img %>
+</p>
+
+<p>
+  <strong>Img:</strong>
+  <%= @company.img %>
+</p>
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>
